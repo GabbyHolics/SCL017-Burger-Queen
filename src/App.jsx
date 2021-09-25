@@ -1,48 +1,46 @@
 import "./App.css";
 import React from "react";
-import logo from "./assets/logo.png";
-export const App = () => {
+// import logo from "./assets/logo.png";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
+const App = () => {
   return (
-    <div className="container">
-    <div className="row">
-      <div className="col-12 ">
-        <ul class="nav nav-pills float-end">
-          <li class="nav-item">
-            <a class="nav-link active " href="#">
-              Active
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link active mx-2" href="#">
-              Link
-            </a>
-          </li>
-        </ul>
-        </div>
-        <div className="row ">
-        <div className="col-8 mx-auto" >
-        <div class="d-flex flex-row justify-content-center alig-items-center">
-            <img
-              class="rounded mx-auto d-block "
-              className="logo"
-              src={logo}
-              alt="Card image cap"
-            />
-            <div class="card-body" className ="buttoms">
-              <a href="#" class="btn btn-primary ">
-                Go somewhere
-                </a>
-              <a href="#" class="btn btn-primary">
-                Go somewhere
-              </a>
-              
-            </div>
-          </div>
-          </div>
-        </div>
+    <Router>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/users">Users</Link>
+            </li>
+          </ul>
+        </nav>
+      <div className="container">
+        <Switch>
+          <Route path="/order"> 
+          Pedidos
+          </Route>
+          <Route path="/menu"> 
+            Menu
+          </Route>
+          <Route path="/newOrder"> 
+          Nuevo Pedido
+          </Route>     
+          <Route path="/">
+            Inicio
+          </Route>
+        </Switch>
       </div>
-    </div>
-  );
+    </Router>
+   )
 };
 
 export default App;

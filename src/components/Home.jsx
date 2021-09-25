@@ -1,3 +1,15 @@
+import React from 'react'
+
+const Home = () => {
+    return (
+        <div>
+            <h3>Soy el home </h3>
+        </div>
+    )
+}
+
+export default Home
+
 // import React from 'react'
 
 // export const Home = () => {
