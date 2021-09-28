@@ -1,12 +1,10 @@
 import React from "react";
-import {firebase} from "../firebase";
-// import { db } from "../firebase";
 // import { collection, addDoc } from "firebase/firestore";
 
 
 const NewOrder = () => {
-  const [newOrder, setNewOrder] = React.useState("");
-  const [newTab, setNewTab] = React.useState("");
+  const [newOrder, setNewOrder] = React.useState([]);
+  const [newTab, setNewTab] = React.useState([]);
   const [error, setError] = React.useState(null);
 
   const getData = (e) => {
@@ -27,8 +25,7 @@ const NewOrder = () => {
     setNewTab('');
   }
 
-
-
+  
   return (
     <div className="container-fluid  view-menu">
         <div className="m-0 vh-100 row justify-content-center align-items-center">
@@ -36,12 +33,12 @@ const NewOrder = () => {
             <form onSubmit={getData}>
               {error && <div className="alert alert-danger">{error}</div>}
               <div className="mb-3">
-                <label for="exampleInputEmail1" className="form-label">
+                <label className="form-label">
                   Nombre de Cliente
                 </label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   onChange={(e) => setNewOrder(e.target.value)}
                   value={newOrder}
                 />
@@ -50,12 +47,12 @@ const NewOrder = () => {
                 </div>
               </div>
               <div className="mb-3">
-                <label for="exampleInputPassword1" className="form-label">
+                <label  className="form-label">
                   Numero de Mesa
                 </label>
                 <input
                   type="number"
-                  class="form-control"
+                  className="form-control"
                   onChange={(e) => setNewTab(e.target.value)}
                   value={newTab}
                 />
