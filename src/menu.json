@@ -1,0 +1,88 @@
+{
+    "Entradas":[
+        {
+            "id":1,
+            "type": "Aros de Cebolla",
+            "price": 4
+        },
+        {
+            "id":2,
+            "type": "Deditos de queso",
+            "price": 5
+        },
+        {
+            "id":3,
+            "type": "Palitos de Ajo",
+            "price": 5
+        }
+    ],
+    "Pizzas":[
+        {
+            "id":4,
+            "type": "Pizza de Pollo",
+            "price": 12
+        },
+        {
+            "id":5,
+            "type": "Pizza de Carne",
+            "price": 13
+        },
+        {
+            "id":6,
+            "type": "Pizza Vegetariana",
+            "price": 12
+        }
+    ],
+    "Pizzas Dobles":[
+        {
+            "id":7,
+            "type": "Pizza doble de Pollo",
+            "price": 24
+        },
+        {
+            "id":8,
+            "type": "Pizza doble de Carne",
+            "price": 26
+        },
+        {
+            "id":9,
+            "type": "Pizza Vegetariana",
+            "price": 20
+        }
+    ],
+    "Extras":[
+        {
+            "id":10,
+            "type": "Salame",
+            "price": 3
+        },
+        {
+            "id":11,
+            "type": "Queso",
+            "price": 2
+        },
+        {
+            "id":12,
+            "type": "Piña",
+            "price": 2
+        }
+    ],
+    "Bebidas":[
+        {
+            "id":13,
+            "type": "Coca-Cola",
+            "price": 3
+        },
+        {
+            "id":14,
+            "type": "Sprite",
+            "price": 2
+        },
+        {
+            "id":15,
+            "type": "Agua",
+            "price": 2
+        }
+    ]
+}
+

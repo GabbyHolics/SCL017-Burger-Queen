@@ -1,11 +1,73 @@
-import React from 'react'
+import React from "react";
+import {firebase} from "../firebase";
+// import { db } from "../firebase";
+// import { collection, addDoc } from "firebase/firestore";
+
 
 const NewOrder = () => {
-    return (
-        <div>
-            <h3>soy la nueva orden, puedo ser modal o vista no lo se</h3>
+  const [newOrder, setNewOrder] = React.useState("");
+  const [newTab, setNewTab] = React.useState("");
+  const [error, setError] = React.useState(null);
+
+  const getData = (e) => {
+    e.preventDefault();
+    if (!newOrder.trim()) {
+      setError("Ingrese nombre del cliente");
+      return;
+    }
+    if (!newTab.trim()) {
+      setError("Ingrese Numero de Mesa");
+      return;
+    } else {
+      console.log(newTab);
+      console.log(newOrder);
+    }
+    setError("");
+    setNewOrder('');
+    setNewTab('');
+  }
+
+
+
+  return (
+    <div className="container-fluid  view-menu">
+        <div className="m-0 vh-100 row justify-content-center align-items-center">
+          <div className="col-8">
+            <form onSubmit={getData}>
+              {error && <div className="alert alert-danger">{error}</div>}
+              <div className="mb-3">
+                <label for="exampleInputEmail1" className="form-label">
+                  Nombre de Cliente
+                </label>
+                <input
+                  type="text"
+                  class="form-control"
+                  onChange={(e) => setNewOrder(e.target.value)}
+                  value={newOrder}
+                />
+                <div id="emailHelp" className="form-text">
+                  Recuerda escribir bien el nombre del cliente
+                </div>
+              </div>
+              <div className="mb-3">
+                <label for="exampleInputPassword1" className="form-label">
+                  Numero de Mesa
+                </label>
+                <input
+                  type="number"
+                  class="form-control"
+                  onChange={(e) => setNewTab(e.target.value)}
+                  value={newTab}
+                />
+              </div>
+              <button type="submit" className="btn btn-primary">
+                Registar
+              </button>
+            </form>
         </div>
-    )
-}
+      </div>
+    </div>
+  );
+  }
 
 export default NewOrder
