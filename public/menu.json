@@ -1,5 +1,5 @@
 {
-    "Entradas":[
+    "entradas":[
         {
             "id":1,
             "type": "Aros de Cebolla",
@@ -16,7 +16,7 @@
             "price": 5
         }
     ],
-    "Pizzas":[
+    "pizzas":[
         {
             "id":4,
             "type": "Pizza de Pollo",
@@ -33,7 +33,7 @@
             "price": 12
         }
     ],
-    "Pizzas Dobles":[
+    "pizzasDobles":[
         {
             "id":7,
             "type": "Pizza doble de Pollo",
@@ -50,7 +50,7 @@
             "price": 20
         }
     ],
-    "Extras":[
+    "extras":[
         {
             "id":10,
             "type": "Salame",
@@ -67,7 +67,7 @@
             "price": 2
         }
     ],
-    "Bebidas":[
+    "bebidas":[
         {
             "id":13,
             "type": "Coca-Cola",

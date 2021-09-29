@@ -1,9 +1,10 @@
 import React from "react";
-// import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, getDocs } from "firebase/firestore";
+import db from "../firebase"
 
 
 const NewOrder = () => {
-  const [newOrder, setNewOrder] = React.useState([]);
+  const [newOrder,setNewOrder] = React.useState([]);
   const [newTab, setNewTab] = React.useState([]);
   const [error, setError] = React.useState(null);
 
@@ -17,15 +18,38 @@ const NewOrder = () => {
       setError("Ingrese Numero de Mesa");
       return;
     } else {
-      console.log(newTab);
-      console.log(newOrder);
+      
+     
     }
     setError("");
     setNewOrder('');
     setNewTab('');
+  
   }
 
+  React.useEffect=(()=>{
+    const addData = async() =>{
+      try {
+        const docRef = await addDoc(collection(db, "orders"), {
+          name: newOrder,
+          tab: newTab
+        });
+        console.log("Document written with ID: ", docRef.id);
+        
+      } catch (error) {
+        console.log(error);
+      }
+     
+    }
+    addData(setNewOrder)
+    addData(setNewTab)
+
+  }, [])
   
+    
+ 
+  
+
   return (
     <div className="container-fluid  view-menu">
         <div className="m-0 vh-100 row justify-content-center align-items-center">
