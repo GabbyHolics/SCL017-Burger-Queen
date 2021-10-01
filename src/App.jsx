@@ -5,19 +5,17 @@ import Menu from './components/Menu'
 import NewOrder from './components/NewOrder'
 import Order from './components/Order'
 
+
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
-
-
 const App = () => {
+
   return (
     <Router>
-        
       <div className="container-fluid">
         <Switch>
           <Route path="/order"> 
@@ -36,6 +34,8 @@ const App = () => {
       </div>
     </Router>
    )
-};
+
+  };
+
 
 export default App;

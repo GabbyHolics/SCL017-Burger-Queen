@@ -1,6 +1,8 @@
 import React from "react";
-import { collection, addDoc, getDocs } from "firebase/firestore";
+import { collection, addDoc } from "firebase/firestore";
 import db from "../firebase"
+import {Link} from "react-router-dom"
+import logo from '../assets/logo.png'
 
 
 const NewOrder = () => {
@@ -18,46 +20,37 @@ const NewOrder = () => {
       setError("Ingrese Numero de Mesa");
       return;
     } else {
-      
-     
+    addData()
     }
     setError("");
     setNewOrder('');
     setNewTab('');
-  
   }
 
-  React.useEffect=(()=>{
-    const addData = async() =>{
-      try {
-        const docRef = await addDoc(collection(db, "orders"), {
-          name: newOrder,
-          tab: newTab
-        });
-        console.log("Document written with ID: ", docRef.id);
-        
-      } catch (error) {
-        console.log(error);
-      }
-     
+  const addData = async() =>{
+    try {
+      const docRef = await addDoc(collection(db, "orders"), {
+        name: newOrder,
+        tab: newTab,
+        order: []
+      });
+      console.log("Document written with ID: ", docRef.id);
+      
+    } catch (error) {
+      console.log(error);
     }
-    addData(setNewOrder)
-    addData(setNewTab)
-
-  }, [])
-  
-    
- 
-  
+   
+  }
 
   return (
-    <div className="container-fluid  view-menu">
-        <div className="m-0 vh-100 row justify-content-center align-items-center">
+    <div className="container-fluid vh-100  bg-success  bg-opacity-25">
+        <div className=" row   justify-content-center align-items-center ">
           <div className="col-8">
             <form onSubmit={getData}>
               {error && <div className="alert alert-danger">{error}</div>}
+              <img src={logo} alt="" className="img-fluid mb-5 " />
               <div className="mb-3">
-                <label className="form-label">
+                <label className="form-label h2 ">
                   Nombre de Cliente
                 </label>
                 <input
@@ -66,12 +59,12 @@ const NewOrder = () => {
                   onChange={(e) => setNewOrder(e.target.value)}
                   value={newOrder}
                 />
-                <div id="emailHelp" className="form-text">
+                <div className="form-text " >
                   Recuerda escribir bien el nombre del cliente
                 </div>
               </div>
               <div className="mb-3">
-                <label  className="form-label">
+                <label  className="form-label h2">
                   Numero de Mesa
                 </label>
                 <input
@@ -80,15 +73,17 @@ const NewOrder = () => {
                   onChange={(e) => setNewTab(e.target.value)}
                   value={newTab}
                 />
-              </div>
-              <button type="submit" className="btn btn-primary">
+              </div> 
+              <Link to="/menu"> 
+              <button type="submit" className="btn btn-success btn-lg">
                 Registar
               </button>
+              </Link> 
             </form>
         </div>
       </div>
     </div>
   );
   }
-
+//m-0 vh-100 row justify-content-center align-items-center
 export default NewOrder
