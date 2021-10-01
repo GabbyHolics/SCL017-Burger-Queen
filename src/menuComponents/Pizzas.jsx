@@ -1,15 +1,13 @@
 import React from 'react'
-import {data} from '../components/ListOrder'
 
-const Pizzas = ({dataPizza}) => {
-    let arrayPizza = [];
-
+const Pizzas = ({dataPizza , setListOrder, listOrder}) => {
+  
     const addData = (id) =>{
         const newData = dataPizza.filter((item) => item.id === id)
-        arrayPizza.push(newData);
-        data(arrayPizza);
+        setListOrder([...listOrder, ...newData])
         
     }
+    
     return (
         <div>
             {
@@ -22,3 +20,7 @@ const Pizzas = ({dataPizza}) => {
 }
 
 export default Pizzas
+//tengo el array flitrado por id
+//tengo que pasarlo a el componente de lista para verlo
+// editarlo
+// sumarlo el component
