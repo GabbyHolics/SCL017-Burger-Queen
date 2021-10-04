@@ -1,18 +1,18 @@
 import React from "react";
 import { addDataOrders } from "../firebaseFunctions/firebaseFunctions";
-import { useHistory } from "react-router-dom"
+import { Link, useHistory } from "react-router-dom"
 import logo from '../assets/logo.png'
 
-const NewOrder = ({setClientHandler}) => {
+const NewOrder = ({setClientHandler, setTabHandler}) => {
 
-  const [newOrder,setNewOrder] = React.useState('');
+  const [newClient,setNewClient] = React.useState('');
   const [newTab, setNewTab] = React.useState('');
   const [error, setError] = React.useState(null);
   let history = useHistory();
 
   const getData = (e) => {
     e.preventDefault();
-    if (newOrder === ('')) {
+    if (newClient === ('')) {
       setError("Ingrese nombre del cliente");
       return;
     }
@@ -20,18 +20,26 @@ const NewOrder = ({setClientHandler}) => {
       setError("Ingrese Numero de Mesa");
       return;
     } 
-    setClientHandler(newOrder);
-    addDataOrders(newOrder, newTab);
+    setClientHandler(newClient);
+    setTabHandler(newTab)
+    addDataOrders(newClient, newTab);
     setError(null);
-    setNewOrder('');
+    setNewClient('');
     setNewTab('');
     history.push('/menu')
   }
 
   return (
     <div className="container-fluid vh-100  bg-success  bg-opacity-25">
+        <div className="col-8">
+        <Link to="/" className="btn btn-danger  btn-lg  ">
+              X
+            </Link>
+            </div>
         <div className=" row   justify-content-center align-items-center ">
+    
           <div className="col-8">
+        
             <form onSubmit={getData}>
               {error && <div className="alert alert-danger">{error}</div>}
               <img src={logo} alt="" className="img-fluid mb-5 " />
@@ -42,8 +50,8 @@ const NewOrder = ({setClientHandler}) => {
                 <input
                   type="text"
                   className="form-control"
-                  onChange={(e) => setNewOrder(e.target.value)}
-                  value={newOrder}
+                  onChange={(e) => setNewClient(e.target.value)}
+                  value={newClient}
                 />
                 <div className="form-text " >
                   Recuerda escribir bien el nombre del cliente

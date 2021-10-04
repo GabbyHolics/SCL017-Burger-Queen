@@ -14,6 +14,7 @@ import {
 
 const App = () => {
 const [client, setClient] = React.useState('');
+const [tab, setTab] = React.useState('');
   return (
     <Router>
       <div className="container-fluid">
@@ -24,11 +25,13 @@ const [client, setClient] = React.useState('');
           <Route path="/menu"> 
            <Menu
              client = {client}
+             tab={tab}
            />
           </Route>
           <Route path="/newOrder"> 
           <NewOrder 
             setClientHandler = {setClient}
+            setTabHandler = {setTab} 
           />
           </Route>     
           <Route path="/">
