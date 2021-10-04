@@ -13,7 +13,7 @@ import {
 } from "react-router-dom";
 
 const App = () => {
-
+const [client, setClient] = React.useState('');
   return (
     <Router>
       <div className="container-fluid">
@@ -22,10 +22,14 @@ const App = () => {
           <Order/>
           </Route>
           <Route path="/menu"> 
-           <Menu/>
+           <Menu
+             client = {client}
+           />
           </Route>
           <Route path="/newOrder"> 
-          <NewOrder />
+          <NewOrder 
+            setClientHandler = {setClient}
+          />
           </Route>     
           <Route path="/">
             <Home/>

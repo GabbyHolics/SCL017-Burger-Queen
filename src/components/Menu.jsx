@@ -8,9 +8,8 @@ import Drink from "../menuComponents/Drink"
 import menuData from "../menu.json"
 import ListOrder from "./ListOrder";
 import Users from "./Users";
-const Menu = () => {
+const Menu = ({client}) => {
   const getDataMenu = menuData;
-
   const [entry, setEntry] = React.useState([]);
   const [drink, setDrink] = React.useState([]);
   const [pizzas, setPizzas] = React.useState([]);
@@ -70,7 +69,9 @@ const Menu = () => {
         <div className="col-6 vh-100 bg-success bg-opacity-25">
         <div className="row d-flex flex-direction-column">
         <h3 className="h1 text-center mt-4"> Cliente </h3>
-       <Users />
+       <Users 
+         client ={client}
+       />
         <label className="form-label">Disabled input</label>
           </div>
           <div className="row">

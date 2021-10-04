@@ -1,45 +1,31 @@
 import React from "react";
-import { collection, addDoc } from "firebase/firestore";
-import db from "../firebase"
-import {Link} from "react-router-dom"
+import { addDataOrders } from "../firebaseFunctions/firebaseFunctions";
+import { useHistory } from "react-router-dom"
 import logo from '../assets/logo.png'
 
+const NewOrder = ({setClientHandler}) => {
 
-const NewOrder = () => {
-  const [newOrder,setNewOrder] = React.useState([]);
-  const [newTab, setNewTab] = React.useState([]);
+  const [newOrder,setNewOrder] = React.useState('');
+  const [newTab, setNewTab] = React.useState('');
   const [error, setError] = React.useState(null);
+  let history = useHistory();
 
   const getData = (e) => {
     e.preventDefault();
-    if (!newOrder.trim()) {
+    if (newOrder === ('')) {
       setError("Ingrese nombre del cliente");
       return;
     }
-    if (!newTab.trim()) {
+    if (newTab === ('')) {
       setError("Ingrese Numero de Mesa");
       return;
-    } else {
-    addData()
-    }
-    setError("");
+    } 
+    setClientHandler(newOrder);
+    addDataOrders(newOrder, newTab);
+    setError(null);
     setNewOrder('');
     setNewTab('');
-  }
-
-  const addData = async() =>{
-    try {
-      const docRef = await addDoc(collection(db, "orders"), {
-        name: newOrder,
-        tab: newTab,
-        order: []
-      });
-      console.log("Document written with ID: ", docRef.id);
-      
-    } catch (error) {
-      console.log(error);
-    }
-   
+    history.push('/menu')
   }
 
   return (
@@ -74,11 +60,10 @@ const NewOrder = () => {
                   value={newTab}
                 />
               </div> 
-              <Link to="/menu"> 
+              
               <button type="submit" className="btn btn-success btn-lg">
-                Registar
+                Registrar
               </button>
-              </Link> 
             </form>
         </div>
       </div>
