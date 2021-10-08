@@ -7,7 +7,6 @@ import PizzasDobles from "../menuComponents/PizzasDouble";
 import Drink from "../menuComponents/Drink";
 import menuData from "../menu.json";
 import ListOrder from "./ListOrder";
-import Users from "./Users";
 const Menu = ({ client, tab }) => {
   const getDataMenu = menuData;
   const [entry, setEntry] = React.useState([]);
@@ -16,6 +15,7 @@ const Menu = ({ client, tab }) => {
   const [pizzasDouble, setPizzasDouble] = React.useState([]);
   const [additional, setAdditional] = React.useState([]);
   const [listOrder, setListOrder] = React.useState([]);
+ 
   React.useEffect(() => {
     setEntry(getDataMenu.entradas);
     setDrink(getDataMenu.bebidas);
@@ -65,11 +65,7 @@ const Menu = ({ client, tab }) => {
 
           <div className="col-6 vh-100 bg-success bg-opacity-25">
             <div className="row d-flex flex-direction-column">
-              <h3 className="h1 text-center mt-4"> Cliente </h3>
-              <Users 
-              client={client}
-              tab={tab}
-               />
+      
             </div>
             <div className="row">
             <h3 className="h1 text-center"> Orden </h3>
@@ -77,6 +73,9 @@ const Menu = ({ client, tab }) => {
                 <ListOrder
                  listOrder={listOrder} 
                  setListOrder={setListOrder}
+                 client={client}
+                  tab ={tab}
+                 
                 />
               </ul>
             </div>

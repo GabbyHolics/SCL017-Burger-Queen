@@ -1,18 +1,24 @@
 import db from "../firebase"
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc  } from "firebase/firestore";
 
-const addDataOrders = async(name, tab) =>{
+const addDataOrders = async (itemsCollection) =>{
+  const today = new Date()
+  const date = today.getDate()+'-'+(today.getMonth()+1)+'-'+today.getFullYear() +' '+today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
     try{
-        await addDoc(collection(db, "orders"), {
-        name, 
+      const {client, tab, listOrderArray, total} = itemsCollection;
+      
+       const data = await addDoc(collection(db, "orders" ), {
+        client, 
         tab,
-        order: []
+        listOrderArray, 
+        date,
+       total
       });
-     
+     console.log(data.id);
     } catch (error) {
       console.log(error);
     }
    
   }
 
-export { addDataOrders }
+export { addDataOrders, db  }

@@ -1,5 +1,4 @@
 import React from "react";
-import { addDataOrders } from "../firebaseFunctions/firebaseFunctions";
 import { Link, useHistory } from "react-router-dom"
 import logo from '../assets/logo.png'
 
@@ -22,7 +21,6 @@ const NewOrder = ({setClientHandler, setTabHandler}) => {
     } 
     setClientHandler(newClient);
     setTabHandler(newTab)
-    addDataOrders(newClient, newTab);
     setError(null);
     setNewClient('');
     setNewTab('');
