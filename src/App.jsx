@@ -3,7 +3,7 @@ import React from "react";
 import Home from './components/Home'
 import Menu from './components/Menu'
 import NewOrder from './components/NewOrder'
-import Order from './components/Order'
+import Orders from './components/Orders'
 
 
 import {
@@ -21,7 +21,7 @@ const [getColletionOrder, setGetColletionOrder] = React.useState('');
       <div className="container-fluid">
         <Switch>
           <Route path="/order"> 
-          <Order/>
+          <Orders/>
           </Route>
           <Route path="/menu"> 
            <Menu
