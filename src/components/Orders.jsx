@@ -1,7 +1,7 @@
 import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
 import { db } from "../firebaseFunctions/firebaseFunctions";
 import { Link } from "react-router-dom";
-import '../components/style.css'
+import '../components/styleComponents.css'
 
 import React, { useState, useEffect } from "react";
 const Orders = () => {
@@ -17,7 +17,7 @@ const Orders = () => {
     <div className="container-fluid-md ">
       <div className="row">
             <div className="col-12 ">
-                <Link to="/" className="btn btn-danger   ">
+                <Link to="/waiter" className="btn btn-danger mt-4  ">
                     X
                 </Link>
                 <h3 className="h1 text-center">Ordenes </h3>
@@ -32,19 +32,22 @@ const Orders = () => {
                   <h6>
                       Fecha: {item.date}
                       </h6> 
-                      <h5 className>N # 
+                      <h5> N# 
                       {item.tab}
                       </h5> 
                       <h5>
                       Cliente:
                        {item.client} 
                       </h5>
-                      
                       <div className='list-group list-group-flush '>
-                          {item.listOrderArray.map(({ type }) => (
-                              <div className='list-group-item'>{type}</div>
+                          {item.listOrderArray.map(({ type, price }) => (
+                              <div className='list-group-item'>{type} $ {price}</div>
                           ))}
                       </div>
+                      <h5 className="mt-1">
+                      Total:
+                        $ {item.total} 
+                      </h5>
                   </div>
               ))}
         </div>

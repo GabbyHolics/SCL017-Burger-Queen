@@ -28,12 +28,12 @@ const Menu = ({ client, tab }) => {
       <div className="container-fluid">
         <div className="row">
           <div className="col-6  bg-success">
-            <Link to="/" className="btn btn-danger   ">
+            <Link to="/" className="btn btn-danger mt-4">
               X
             </Link>
-            <h3 className="h1 text-center"> Menu </h3>
+            <h3 className="h1 text-center text-white"> Menu </h3>
             <hr />
-            <h3> Entradas</h3>
+            <h3 className=" text-white m-5"> Entradas</h3>
             <ul>
               <Entry
                 dataEntry={entry}
@@ -41,7 +41,7 @@ const Menu = ({ client, tab }) => {
                 setListOrder={setListOrder}
               />
             </ul>
-            <h3> Pizzas</h3>
+            <h3 className=" text-white m-5"> Pizzas</h3>
             <ul>
               <Pizzas
                 dataPizza={pizzas}
@@ -49,7 +49,7 @@ const Menu = ({ client, tab }) => {
                 listOrder={listOrder}
               />
             </ul>
-            <h3> Pizzas Dobles</h3>
+            <h3 className=" text-white m-5"> Pizzas Dobles</h3>
             <ul>
               <PizzasDouble 
               dataPizzaDouble={pizzasDouble}
@@ -57,7 +57,7 @@ const Menu = ({ client, tab }) => {
               listOrder={listOrder}
               />
             </ul>
-            <h3> Bebidas</h3>
+            <h3 className=" text-white m-5"> Bebidas</h3>
             <ul>
               <Drink
               dataDrink={drink} 
@@ -65,7 +65,7 @@ const Menu = ({ client, tab }) => {
               listOrder={listOrder}
               />
             </ul>
-            <h3> Extras </h3>
+            <h3 className=" text-white m-5"> Extras </h3>
             <ul>
               <Additional 
               dataAdditional={additional} 

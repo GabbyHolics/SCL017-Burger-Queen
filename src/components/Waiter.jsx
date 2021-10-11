@@ -2,41 +2,41 @@ import React from 'react'
 import logo from '../assets/logo.png'
 import { Link } from 'react-router-dom'
 import './styleComponents.css'
-const Home = () => {
-
-  return (
-    <div className="container-fluid ">
-    {/* <div className="navbar d-flex justify-content-end mt-5  ">
-    <Link to='/' className="btn btn-success btn-lg m-2 ">
-    Garzon 
-    </Link>
-    <Link to='/cousine' className="btn btn-danger   m-2 btn-lg  ">
-    Cocina
-    </Link>
-    </div> */}
-      <div className="m-0  vh-100 row justify-content-center align-items-center">
-        <div className="col-8  ">
+const Waiter = () => {
+    
+    return (
+        
+        <div className=" vh-100">
+        <div className="row">
+        <div className="col-12 mt-4 ">
+                <Link to="/" className="btn btn-primary   ">
+                    X
+                </Link>
+        </div>
+        </div>
+        <div className="row   vh-100 justify-content-center align-items-center ">
+        <div className="col-8 ">
           <div className="card  ">
             <img src={logo} alt="" className="img-fluid image-logo" />
             <div className="card-body d-flex flex-column gap-2">
               <Link
-                to="/waiter"
+                to="/NewOrder"
                 className="btn btn-success btn-lg mt-5 "
               >
-                Garzon 
+                Nueva Pedido
               </Link>
               <Link
-                to="/cousine"
+                to="/Order"
                 className="btn btn-danger btn-lg  mt-5 "
               >
-                Cocina
+                Pedidos
               </Link>
+              </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-  );
-};
+    )
+}
 
-export default Home
+export default Waiter

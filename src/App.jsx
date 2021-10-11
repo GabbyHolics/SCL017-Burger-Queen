@@ -4,7 +4,8 @@ import Home from './components/Home'
 import Menu from './components/Menu'
 import NewOrder from './components/NewOrder'
 import Orders from './components/Orders'
-
+import Cuisine from './components/Cuisine'
+import Waiter from './components/Waiter'
 
 import {
   BrowserRouter as Router,
@@ -31,12 +32,19 @@ const [getColletionOrder, setGetColletionOrder] = React.useState('');
             
            />
           </Route>
+          
           <Route path="/newOrder"> 
           <NewOrder 
             setClientHandler = {setClient}
             setTabHandler = {setTab} 
             setGetColletionOrder={setGetColletionOrder}
           />
+          </Route>
+          <Route path="/cousine">
+          <Cuisine/>
+          </Route>
+          <Route path="/waiter">
+          <Waiter/>
           </Route>     
           <Route path="/">
             <Home/>

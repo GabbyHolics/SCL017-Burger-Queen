@@ -30,12 +30,11 @@ const NewOrder = ({setClientHandler, setTabHandler}) => {
   return (
     <div className="container-fluid vh-100  bg-success  bg-opacity-25">
         <div className="col-8">
-        <Link to="/" className="btn btn-danger  btn-lg  ">
+        <Link to="/waiter" className="btn btn-danger  btn-lg mt-4  ">
               X
             </Link>
             </div>
-        <div className=" row   justify-content-center align-items-center ">
-    
+        <div className=" row justify-content-center align-items-center mt-5 ">
           <div className="col-8">
         
             <form onSubmit={getData}>
