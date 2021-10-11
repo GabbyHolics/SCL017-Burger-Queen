@@ -8,7 +8,7 @@ const ModalSend = () => {
       <div className="modal-container">
         <div className="modal-content">
           <div className="body">
-            <span className='h4'>La orden se envio a cocina, y podras verla en orders</span> 
+            <span className='h4'>La orden se envio a cocina, y podras verla en pedidos</span> 
           </div>
           <div className="footer">
             <Link to="/">

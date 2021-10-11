@@ -1,11 +1,15 @@
 import React from 'react'
 
-const Drink = ({dataDrink}) => {
+const Drink = ({dataDrink, setListOrder, listOrder}) => {
+    const addDataDrink = (id) => {
+        const newDataDrink = dataDrink.filter(item => item.id === id)
+        setListOrder([...listOrder, ...newDataDrink])
+    }
     return (
         <div>
             {
                 dataDrink.map((item) => (
-                    <li className="btn btn-danger m-1" key={item.id} > {item.type}  $ {item.price}</li>
+                    <li className="btn btn-danger m-1" key={item.id} onTouchStart={() => addDataDrink(item.id)}> {item.type}  $ {item.price}</li>
                 ))
             }
         </div>

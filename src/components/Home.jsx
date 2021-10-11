@@ -6,6 +6,14 @@ const Home = () => {
 
   return (
     <div className="container-fluid ">
+    <div className="navbar d-flex justify-content-end mt-5  ">
+    <Link to='/' className="btn btn-success btn-lg m-2 ">
+    Garzon 
+    </Link>
+    <Link to='/cocina' className="btn btn-danger   m-2 btn-lg  ">
+    Cocina
+    </Link>
+    </div>
       <div className="m-0  vh-100 row justify-content-center align-items-center">
         <div className="col-8  ">
           <div className="card  ">

@@ -2,9 +2,9 @@ import React from 'react'
 
 const Pizzas = ({dataPizza , setListOrder, listOrder}) => {
   
-    const addData = (id) =>{
-        const newData = dataPizza.filter((item) => item.id === id)
-        setListOrder([...listOrder, ...newData])
+    const addDataPizzas = (id) =>{
+        const newDataPizza = dataPizza.filter((item) => item.id === id)
+        setListOrder([...listOrder, ...newDataPizza])
         
     }
     
@@ -12,7 +12,7 @@ const Pizzas = ({dataPizza , setListOrder, listOrder}) => {
         <div>
             {
                 dataPizza.map((item) =>(
-                    <li className="btn btn-danger m-1" key={item.id} onTouchStart={(() => addData(item.id))}> {item.type} $ {item.price} </li>
+                    <li className="btn btn-danger m-1" key={item.id} onTouchStart={(() => addDataPizzas(item.id))}> {item.type} $ {item.price} </li>
                 ))
             }
         </div>
@@ -20,7 +20,3 @@ const Pizzas = ({dataPizza , setListOrder, listOrder}) => {
 }
 
 export default Pizzas
-//tengo el array flitrado por id
-//tengo que pasarlo a el componente de lista para verlo
-// editarlo
-// sumarlo el component

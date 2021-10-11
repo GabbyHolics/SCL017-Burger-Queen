@@ -22,7 +22,7 @@ const ListOrder = ({ listOrder, setListOrder, client, tab }) => {
   };
 
   return (
-    <div className="container-fluid vh-100">
+    <div className="container-fluid">
         <div className="row">
           <h3 className="h3  mt-4"> Cliente </h3>
           <h6> Nombre cliente: {client}</h6>
@@ -37,22 +37,21 @@ const ListOrder = ({ listOrder, setListOrder, client, tab }) => {
               </button>
             </div>
         </div>
-        <div className="row">
-          <ul>
+        <div className="row ">
+          <ul className="list-group list-group-order ">
             {listOrder.length === 0 ? (
               <p>No hay ordenes</p>
             ) : (
               listOrder.map((item, index) => (
-                <li className="list-group-item mt-1" key={index} id={item.id}>
+                <li className="list-group-item mt-1 overflow-auto " key={index} id={item.id}>
                   <span>
                     {item.type} $ {item.price}
                   </span>
-                  <span> contador </span>
                   <button
-                    className="btn btn-danger btn-sm  float-end"
+                    className="btn btn-danger btn-sm justify-content-center float-end"
                     onTouchStart={() => deleteOrder(item.id)}
                   >
-                    delete
+                    X
                   </button>
                 </li>
               ))

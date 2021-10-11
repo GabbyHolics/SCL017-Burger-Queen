@@ -1,14 +1,14 @@
-// import { query, orderBy, limit } from "firebase/firestore";
 import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
 import { db } from "../firebaseFunctions/firebaseFunctions";
 import { Link } from "react-router-dom";
+import '../components/style.css'
 
 import React, { useState, useEffect } from "react";
 const Orders = () => {
   const [getOrder, setGetOrder] = useState([]);
   useEffect(
     () =>
-      onSnapshot(query(collection(db, "orders"), orderBy('date','desc')), (snapshot) =>
+      onSnapshot(query(collection(db, "orders"), orderBy('tab','desc')), (snapshot) =>
         setGetOrder(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id })))
       ),
     []
@@ -22,24 +22,32 @@ const Orders = () => {
                 </Link>
                 <h3 className="h1 text-center">Ordenes </h3>
             </div>
-            <span class="border mt-5 bg-danger p-1"></span>
-            <span class="border mt-2 bg-success p-1"></span>
+            <span className="border mt-5 bg-danger p-1"></span>
+            <span className="border mt-2 bg-success p-1"></span>
       </div>
      <div className="row">
-         <div className="col- ">
-            <ul className="list-group d-flex flex-row flex-wrap ">
-                {getOrder.map((item) => (
-                    <li key={item.id} className="list-group-item list-group-item-action list-group-item-primary m-2 ">
-                       Nombre de Cliente: {item.client},  N # {item.tab} Fecha: {item.date}
-                        <ul>
-                            {item.listOrderArray.map(({ type }) => (
-                                <li>{type}</li>
-                            ))}
-                        </ul>
-                    </li>
-                ))}
-            </ul>
-         </div>
+        <div className="listOrderGrid ">
+              {getOrder.map((item, index) => (
+                  <div key={index} className="list-group-item list-group-item-action list-group-item-success m-2 overflow-auto">
+                  <h6>
+                      Fecha: {item.date}
+                      </h6> 
+                      <h5 className>N # 
+                      {item.tab}
+                      </h5> 
+                      <h5>
+                      Cliente:
+                       {item.client} 
+                      </h5>
+                      
+                      <div className='list-group list-group-flush '>
+                          {item.listOrderArray.map(({ type }) => (
+                              <div className='list-group-item'>{type}</div>
+                          ))}
+                      </div>
+                  </div>
+              ))}
+        </div>
      </div>
      
        

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import Additional from "../menuComponents/Additional";
 import Entry from "../menuComponents/Entry";
 import Pizzas from "../menuComponents/Pizzas";
-import PizzasDobles from "../menuComponents/PizzasDouble";
+import PizzasDouble from "../menuComponents/PizzasDouble";
 import Drink from "../menuComponents/Drink";
 import menuData from "../menu.json";
 import ListOrder from "./ListOrder";
@@ -51,15 +51,27 @@ const Menu = ({ client, tab }) => {
             </ul>
             <h3> Pizzas Dobles</h3>
             <ul>
-              <PizzasDobles dataPizzaDouble={pizzasDouble} />
+              <PizzasDouble 
+              dataPizzaDouble={pizzasDouble}
+              setListOrder={setListOrder}
+              listOrder={listOrder}
+              />
             </ul>
             <h3> Bebidas</h3>
             <ul>
-              <Drink dataDrink={drink} />
+              <Drink
+              dataDrink={drink} 
+              setListOrder={setListOrder}
+              listOrder={listOrder}
+              />
             </ul>
             <h3> Extras </h3>
             <ul>
-              <Additional dataAdditional={additional} />
+              <Additional 
+              dataAdditional={additional} 
+              setListOrder={setListOrder}
+              listOrder={listOrder}
+              />
             </ul>
           </div>
 
