@@ -15,7 +15,7 @@ const Entry = ({dataEntry, listOrder, setListOrder}) => {
         <div>
             {
                 dataEntry.map((item)=>(
-            <li  className="btn btn-primary entry m-1" key={item.id} onTouchStart={(() => addData(item.id))} >{item.type} $ {item.price}</li>
+            <li  className="btn btn-lg btn-menu text-white entry m-1" key={item.id} onTouchStart={(() => addData(item.id))} >{item.type} $ {item.price}</li>
 
                 ))
             }

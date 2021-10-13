@@ -1,5 +1,5 @@
 import React from "react";
-
+import '../menuComponents/styleMenu.css'
 const Additional = ({ dataAdditional, setListOrder, listOrder}) => {
 
   const addDataAdditonal = (id) =>{
@@ -11,7 +11,7 @@ const Additional = ({ dataAdditional, setListOrder, listOrder}) => {
     <div>
       {
         dataAdditional.map((item) => (
-        <li className="btn btn-danger m-1" key={item.id} onTouchStart={() => addDataAdditonal(item.id)} >
+        <li className="btn btn-lg btn-menu text-white m-1" key={item.id} onTouchStart={() => addDataAdditonal(item.id)} >
     
           {item.type} $ {item.price}
         </li>

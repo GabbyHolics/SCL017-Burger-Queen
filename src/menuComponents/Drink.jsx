@@ -9,7 +9,7 @@ const Drink = ({dataDrink, setListOrder, listOrder}) => {
         <div>
             {
                 dataDrink.map((item) => (
-                    <li className="btn btn-danger m-1" key={item.id} onTouchStart={() => addDataDrink(item.id)}> {item.type}  $ {item.price}</li>
+                    <li className="btn btn-lg btn-menu text-white m-1" key={item.id} onTouchStart={() => addDataDrink(item.id)}> {item.type}  $ {item.price}</li>
                 ))
             }
         </div>

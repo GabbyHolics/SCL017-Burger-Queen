@@ -9,7 +9,7 @@ const PizzasDouble = ({dataPizzaDouble, setListOrder, listOrder }) => {
         <div>
            {
             dataPizzaDouble.map((item) =>(
-                <li className="btn btn-danger m-1" key={item.id} onTouchStart={()=> addDataPizzaDouble(item.id)} > {item.type}  $ {item.price} </li>
+                <li className="btn btn-lg btn-menu m-1 text-white" key={item.id} onTouchStart={()=> addDataPizzaDouble(item.id)} > {item.type} $ {item.price} </li>
             ))
            }
         </div>

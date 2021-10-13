@@ -9,7 +9,7 @@ const Waiter = () => {
         <div className=" vh-100">
         <div className="row">
         <div className="col-12 mt-4 ">
-                <Link to="/" className="btn btn-primary   ">
+                <Link to="/" className="btn btn-danger   ">
                     X
                 </Link>
         </div>

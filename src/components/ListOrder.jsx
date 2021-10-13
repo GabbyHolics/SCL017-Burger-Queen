@@ -22,7 +22,7 @@ const ListOrder = ({ listOrder, setListOrder, client, tab }) => {
   };
 
   return (
-    <div className="container-fluid">
+    <div className="container-fluid mt-5">
         <div className="row">
           <h3 className="h3  mt-4"> Cliente </h3>
           <h6> Nombre cliente: {client}</h6>

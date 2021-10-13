@@ -1,4 +1,5 @@
 import React from "react";
+import '../components/styleComponents.css'
 import { Link, useHistory } from "react-router-dom"
 import logo from '../assets/logo.png'
 
@@ -28,9 +29,9 @@ const NewOrder = ({setClientHandler, setTabHandler}) => {
   }
 
   return (
-    <div className="container-fluid vh-100  bg-success  bg-opacity-25">
+    <div className="container-fluid vh-100 backgraund-newOrder">
         <div className="col-8">
-        <Link to="/waiter" className="btn btn-danger  btn-lg mt-4  ">
+        <Link to="/waiter" className="btn btn-success  btn-lg mt-4  ">
               X
             </Link>
             </div>
@@ -41,7 +42,7 @@ const NewOrder = ({setClientHandler, setTabHandler}) => {
               {error && <div className="alert alert-danger">{error}</div>}
               <img src={logo} alt="" className="img-fluid mb-5 " />
               <div className="mb-3">
-                <label className="form-label h2 ">
+                <label className="form-label h2 text-white ">
                   Nombre de Cliente
                 </label>
                 <input
@@ -50,12 +51,12 @@ const NewOrder = ({setClientHandler, setTabHandler}) => {
                   onChange={(e) => setNewClient(e.target.value)}
                   value={newClient}
                 />
-                <div className="form-text " >
+                <div className="form-text text-white " >
                   Recuerda escribir bien el nombre del cliente
                 </div>
               </div>
               <div className="mb-3">
-                <label  className="form-label h2">
+                <label  className="form-label h2 text-white">
                   Numero de Mesa
                 </label>
                 <input

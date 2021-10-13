@@ -19,34 +19,34 @@
     "pizzas":[
         {
             "id":4,
-            "type": "Pizza de Pollo",
+            "type": "Pollo",
             "price": 12
         },
         {
             "id":5,
-            "type": "Pizza de Carne",
+            "type": " Carne",
             "price": 13
         },
         {
             "id":6,
-            "type": "Pizza Vegetariana",
+            "type": "Vegetariana",
             "price": 12
         }
     ],
     "pizzasDobles":[
         {
             "id":7,
-            "type": "Pizza doble de Pollo",
+            "type": "Pollo",
             "price": 24
         },
         {
             "id":8,
-            "type": "Pizza doble de Carne",
+            "type": "Carne",
             "price": 26
         },
         {
             "id":9,
-            "type": "Pizza Vegetariana",
+            "type": "Vegetariana",
             "price": 20
         }
     ],
