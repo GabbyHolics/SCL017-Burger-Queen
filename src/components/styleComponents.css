@@ -2,23 +2,17 @@
     display: grid;
     gap: 1rem;
     grid-auto-rows: 22rem;
-    grid-template-columns: repeat(auto-fill,minmax(16rem,1fr));
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, 20rem);
 }
-
 .list-group-order{
     width: 80%;
 }
-
-.backgraund-listOrder{
-    background: #76b85274;  /* fallback for old browsers */
-   
-    
-    
+.background-listOrder{
+    background: #76b85274; 
 }
 .backgraund-newOrder{
-    background: #ED213A;  /* fallback for old browsers */
-    background: -webkit-linear-gradient(to top, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
-    background: linear-gradient(to top, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
+    background: #ED213A;  
+    background: -webkit-linear-gradient(to top, #93291E, #ED213A);
+    background: linear-gradient(to top, #93291E, #ED213A); 
 }

@@ -2,7 +2,6 @@ import { collection, onSnapshot, query, orderBy } from "firebase/firestore";
 import { db } from "../firebaseFunctions/firebaseFunctions";
 import { Link } from "react-router-dom";
 import '../components/styleComponents.css'
-
 import React, { useState, useEffect } from "react";
 const Orders = () => {
   const [getOrder, setGetOrder] = useState([]);

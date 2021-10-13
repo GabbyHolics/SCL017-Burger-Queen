@@ -1,7 +1,6 @@
 import React from "react";
 import "../componentsModal/modal.css";
 import { Link } from "react-router-dom";
-
 const ModalSend = () => {
   return (
     <div className="modalBackground">

@@ -16,7 +16,7 @@ const Home = () => {
                 to="/waiter"
                 className="btn btn-success btn-lg mt-5 "
               >
-                Garzon 
+                Garzón 
               </Link>
               <Link
                 to="/cousine"

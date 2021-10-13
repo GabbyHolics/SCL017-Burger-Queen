@@ -29,7 +29,8 @@ const NewOrder = ({setClientHandler, setTabHandler}) => {
   }
 
   return (
-    <div className="container-fluid vh-100 backgraund-newOrder">
+    <div className="container-fluid vh-100 backgraund-newOrder 
+    ">
         <div className="col-8">
         <Link to="/waiter" className="btn btn-success  btn-lg mt-4  ">
               X
@@ -57,7 +58,7 @@ const NewOrder = ({setClientHandler, setTabHandler}) => {
               </div>
               <div className="mb-3">
                 <label  className="form-label h2 text-white">
-                  Numero de Mesa
+                  Número de Mesa
                 </label>
                 <input
                   type="number"
@@ -76,5 +77,4 @@ const NewOrder = ({setClientHandler, setTabHandler}) => {
     </div>
   );
   }
-//m-0 vh-100 row justify-content-center align-items-center
 export default NewOrder

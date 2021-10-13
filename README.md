@@ -13,10 +13,9 @@
 ***
 
 ## JinLan Pizza
-Es una aplicación web para un restaurante con necesidad de poder agilizar la toma, gestión y entrega de pedidos,utilizando una tablet y almacenando los datos en la nube y actulizandoce en tiempo real.
+Es una aplicación web para un restaurante con necesidad de poder agilizar la toma, gestión y entrega de pedidos, esta diseñada para usarse en dispositivos tipo tablet. Almacenando los datos en la nube y actulizandoce en tiempo real.
 
-El meserx crea la mesa con nombre y numero, toma el pedido, lo envia a la seccion de pedidos en desarrollo y a cocina para ser preparado.
-
+El meserx crea el pedido con nombre del cliente y número de mesa, toma el pedido, lo envia a la sección de pedidos en desarrollo y simultaneamente a cocina para ser preparado.
 
 ## Historia de Usuario
 
@@ -30,15 +29,15 @@ Yo como meserx quiero tomar el pedido de un cliente para no depender de mi mala 
 - Eliminar productos.
 - Ver resumen y el total de la compra.
 - Enviar pedido a cocina (guardar Firebase v-9).
-- Se ve y funciona bien en una tablet
+- Se ve y funciona bien en una tablet.
 
 ## Definición de terminado
-- Identificar el cliente y crear nueva mesa 
+- Identificar el cliente y crear nueva mesa.
 - Ruta de menú implementada.
-- Menú Json creado y accesible a través de menu.
-- Al seleccionar el pedido, de forma interactiva se visualiza la cantidad, los productos y el precio por la cantidad y el total del pedido.
+- Menú Json creado y accesible.
+- Al seleccionar el pedido, de forma interactiva se visualiza los productos y el total del pedido.
 - El pedido se envía a la colección firestore "orders".
-- Cada pedido se puede visualizar en la sección de Pedidos, resumen que consta con nombre del cliente, número de mesa, nombre del mesero o mesera y productos pedidos con su respectiva cantidad y precio y el total. Con acceso a opción a pagar la cuenta.
+- Cada pedido se puede visualizar en la sección de Pedidos, resumen que consta con nombre del cliente, número de mesa, nombre del mesero o mesera y productos pedidos con su respectiva cantidad y precio y el total.
 - Diseño de interfaz terminado.
 
 
