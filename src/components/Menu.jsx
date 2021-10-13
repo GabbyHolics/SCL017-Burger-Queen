@@ -76,7 +76,7 @@ const Menu = ({ client, tab }) => {
             </ul>
           </div>
 
-          <div className="col-6    backgraund-listOrder ">
+          <div className="col-6   backgraund-listOrder ">
             <div className="row d-flex flex-direction-column">
       
             </div>

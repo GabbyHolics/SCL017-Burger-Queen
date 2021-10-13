@@ -22,12 +22,12 @@ const ListOrder = ({ listOrder, setListOrder, client, tab }) => {
   };
 
   return (
-    <div className="container-fluid mt-5">
+    <div className="container-fluid mt-4">
         <div className="row">
-          <h3 className="h3  mt-4"> Cliente </h3>
-          <h6> Nombre cliente: {client}</h6>
-          <h6> Numero de mesa: #{tab}</h6>
-          <div className="row">
+          <h3 className="h3 text-center "> Cliente </h3>
+          <h6 className="list-group-item "> Nombre cliente: {client}</h6>
+          <h6 className="list-group-item "> Numero de mesa: #{tab}</h6>
+          <div className="row mt-1">
             <div className="col-12 justify-content-end mb-3">
               <button
                 className="btn btn-danger btn-sm  float-end"

@@ -2,12 +2,12 @@
 
 ## Índice
 
-* [JinLan Pizza ](#Jinlan-Pizza)
-* [Historia de Usuario](#Historia-de-usuario)
-* [Prototipos](Prototipos)
-* [Interfaz](Interfaz)
-* [Tecnologias](Tecnologias)
-* [Preámbulo](#preámbulo)
+* [JinLan Pizza ](#jinlan-Pizza)
+* [Historia de Usuario](#historia-de-usuario)
+* [Prototipos](#prototipos)
+* [Interfaz](#interfaz)
+* [Tecnologias](#tecnologias)
+* [Link](#link)
 
 
 ***
@@ -43,17 +43,35 @@ Yo como meserx quiero tomar el pedido de un cliente para no depender de mi mala 
 
 
 ## Prototipos
-<details><summary>Prorotipos de baja fidelidad</summary><p></details>
+<details><summary>Prorotipos de baja fidelidad</summary>
 
-<details><summary>Prorotipos de alta fidelidad</summary><p></details>
+![JustificacionDelDiseño](./src/assets/prototipo-de-baja-fidelidad.png)
+
+</details>
+
+
+<details><summary>Prorotipos de alta fidelidad</summary>
+<h1> Mesero </h1>
+
+![JustificacionDelDiseño](./src/assets/mesero-1.png)
+![JustificacionDelDiseño](./src/assets/mesero-2.png)
+
+<h1> Cocina </h1>
+
+![JustificacionDelDiseño](./src/assets/cocina.png)
+</details>
 
 <p> </p>
 
 ## Interfaz
 
+![JustificacionDelDiseño](./src/assets/interfaz-tab.png)
+![JustificacionDelDiseño](./src/assets/interfaz-tab-2.png)
 
 ## Tecnologias
-
-
-
-## Preámbulo
+- React.js.
+- JavaScript ES6.
+- Firebase v9.
+- Bootstrap 5.
+- Css
+## Link
