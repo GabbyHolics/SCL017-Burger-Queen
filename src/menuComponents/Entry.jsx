@@ -1,5 +1,5 @@
 import React from 'react'
-
+// import './menuComponents/styleButton'
 const Entry = ({dataEntry, listOrder, setListOrder}) => {
 
     
@@ -15,7 +15,7 @@ const Entry = ({dataEntry, listOrder, setListOrder}) => {
         <div>
             {
                 dataEntry.map((item)=>(
-            <li  className="btn btn-danger m-1" key={item.id} onTouchStart={(() => addData(item.id))} >{item.type} $ {item.price}</li>
+            <li  className="btn btn-primary entry m-1" key={item.id} onTouchStart={(() => addData(item.id))} >{item.type} $ {item.price}</li>
 
                 ))
             }
