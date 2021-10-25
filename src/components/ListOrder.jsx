@@ -69,7 +69,10 @@ const ListOrder = ({ listOrder, setListOrder, client, tab }) => {
             >
               Enviar Pedido
             </button>
+            
             <button className="btn btn-danger btn-lg mt-5 "> Pagar </button>
+           
+ 
           </div>
           {openModal && <ModalSend  />}
         </div>

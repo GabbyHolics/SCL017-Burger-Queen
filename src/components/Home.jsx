@@ -10,7 +10,7 @@ const Home = () => {
       <div className="m-0  vh-100 row justify-content-center align-items-center">
         <div className="col-8  ">
           <div className="card  ">
-            <img src={logo} alt="" className="img-fluid image-logo" />
+            
             <div className="card-body d-flex flex-column gap-2">
               <Link
                 to="/waiter"
