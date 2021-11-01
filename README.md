@@ -1,4 +1,4 @@
-# JinLan Pizza 🍕
+# JinLan Pizza 🍕 
 
 ## Índice
 
@@ -16,6 +16,8 @@
 Es una aplicación web para un restaurante con necesidad de poder agilizar la toma, gestión y entrega de pedidos, esta diseñada para usarse en dispositivos tipo tablet. Almacenando los datos en la nube y actulizandoce en tiempo real.
 
 El meserx crea el pedido con nombre del cliente y número de mesa, toma el pedido, lo envia a la sección de pedidos en desarrollo y simultaneamente a cocina para ser preparado.
+
+Aún esta en desarrollo
 
 ## Historia de Usuario
 
@@ -64,8 +66,8 @@ Yo como meserx quiero tomar el pedido de un cliente para no depender de mi mala 
 
 ## Interfaz
 
-![JustificacionDelDiseño](./src/assets/interfaz-tab.png)
-![JustificacionDelDiseño](./src/assets/interfaz-tab-2.png)
+<img src= "./src/assets/interfaz-tab.gif" ></img>
+
 
 ## Tecnologias
 - React.js.
@@ -73,4 +75,10 @@ Yo como meserx quiero tomar el pedido de un cliente para no depender de mi mala 
 - Firebase v9.
 - Bootstrap 5.
 - Css
+- HTML 5
+- Scrum 
+- Trello
 ## Link
+
+[JinlanPizzas](http://https://jinlanpizzas.web.app "JinlanPizzas") 🍕
+
