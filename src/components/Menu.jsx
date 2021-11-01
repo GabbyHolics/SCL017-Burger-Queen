@@ -26,9 +26,9 @@ const Menu = ({ client, tab }) => {
   }, [getDataMenu]);
   return (
     <>
-      <div className="container-fluid vh-100">
+      <div className="container-fluid vh-100 ">
         <div className="row">
-          <div className="col-6 vh-100  bg-success">
+          <div className="col-6 vh-100  bg-success overflow-auto">
             <Link to="/waiter" className="btn btn-danger mt-4">
               X
             </Link>
@@ -76,7 +76,7 @@ const Menu = ({ client, tab }) => {
             </ul>
           </div>
 
-          <div className="col-6 vh-100  background-listOrder ">
+          <div className="col-6 vh-100  background-listOrder overflow-auto ">
             <div className="row d-flex flex-direction-column">
       
             </div>
@@ -88,7 +88,6 @@ const Menu = ({ client, tab }) => {
                  setListOrder={setListOrder}
                  client={client}
                   tab ={tab}
-                 
                 />
               </ul>
             </div>

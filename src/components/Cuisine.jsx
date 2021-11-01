@@ -39,8 +39,8 @@ const Cuisine = () => {
               <h6>Fecha: {item.date}</h6>
               <h5 className>N #{item.tab}</h5>
               <div className="list-group list-group-flush ">
-                {item.listOrderArray.map(({ type }) => (
-                  <div className="list-group-item">{type}</div>
+                {item.listOrderArray.map(({ type , index }) => (
+                  <div className="list-group-item" key={index} >{type}</div>
                 ))}
               </div>
             </div>

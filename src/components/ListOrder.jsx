@@ -37,8 +37,8 @@ const ListOrder = ({ listOrder, setListOrder, client, tab }) => {
               </button>
             </div>
         </div>
-        <div className="row ">
-          <ul className="list-group list-group-order ">
+        <div className="row justify-content-center">
+          <ul className="list-group list-group-order  ">
             {listOrder.length === 0 ? (
               <p>No hay ordenes</p>
             ) : (

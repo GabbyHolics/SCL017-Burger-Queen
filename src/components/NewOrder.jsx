@@ -43,7 +43,7 @@ const NewOrder = ({setClientHandler, setTabHandler}) => {
               {error && <div className="alert alert-danger">{error}</div>}
               <img src={logo} alt="" className="img-fluid mb-5 " />
               <div className="mb-3">
-                <label className="form-label h2 text-white ">
+                <label className="form-label h2  ">
                   Nombre de Cliente
                 </label>
                 <input
@@ -52,12 +52,12 @@ const NewOrder = ({setClientHandler, setTabHandler}) => {
                   onChange={(e) => setNewClient(e.target.value)}
                   value={newClient}
                 />
-                <div className="form-text text-white " >
+                <div className="form-text  " >
                   Recuerda escribir bien el nombre del cliente
                 </div>
               </div>
               <div className="mb-3">
-                <label  className="form-label h2 text-white">
+                <label  className="form-label h2 ">
                   Número de Mesa
                 </label>
                 <input

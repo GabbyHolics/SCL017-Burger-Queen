@@ -36,17 +36,17 @@
     "pizzasDobles":[
         {
             "id":7,
-            "type": "Pollo",
+            "type": "Doble Pollo",
             "price": 24
         },
         {
             "id":8,
-            "type": "Carne",
+            "type": "Doble Carne",
             "price": 26
         },
         {
             "id":9,
-            "type": "Vegetariana",
+            "type": " Doble Vegetariana",
             "price": 20
         }
     ],
